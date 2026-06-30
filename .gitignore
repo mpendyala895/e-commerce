@@ -1,0 +1,21 @@
+.idea/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+
+# Maven build outputs
+**/target/
+**/*.class
+
+# Eclipse
+**/.classpath
+**/.project
+**/.settings/
+**/.factorypath
+
+# Maven wrapper jar (often excluded)
+**/.mvn/wrapper/maven-wrapper.jar
+
+# Crash logs
+**/hs_err_pid*
