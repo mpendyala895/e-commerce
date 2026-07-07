@@ -1,9 +1,6 @@
 import api from './api';
 import { User, Product, Order, InventoryItem, NotificationEvent } from '../types';
 
-// ==========================================
-// USER SERVICE ADMIN APIs
-// ==========================================
 
 export const adminGetUsers = async (): Promise<User[]> => {
   const response = await api.get<User[]>('/api/users/admin/all');
@@ -27,9 +24,7 @@ export const adminDeleteUser = async (id: string): Promise<void> => {
   await api.delete(`/api/users/admin/${id}`);
 };
 
-// ==========================================
-// PRODUCT SERVICE ADMIN APIs
-// ==========================================
+
 
 export const adminAddProduct = async (productData: Omit<Product, 'id'>): Promise<Product> => {
   const response = await api.post<Product>('/api/product', productData);
@@ -45,9 +40,7 @@ export const adminDeleteProduct = async (id: string): Promise<void> => {
   await api.delete(`/api/product/${id}`);
 };
 
-// ==========================================
-// ORDER SERVICE ADMIN APIs
-// ==========================================
+
 
 export const adminGetOrders = async (): Promise<Order[]> => {
   const response = await api.get<Order[]>('/api/orders/admin/all');
@@ -62,9 +55,7 @@ export const adminDeleteOrder = async (orderNumber: string): Promise<void> => {
   await api.delete(`/api/orders/admin/${orderNumber}`);
 };
 
-// ==========================================
-// INVENTORY SERVICE ADMIN APIs
-// ==========================================
+
 
 export const adminGetInventory = async (): Promise<InventoryItem[]> => {
   const response = await api.get<InventoryItem[]>('/api/inventory/admin/all');
@@ -83,9 +74,7 @@ export const adminDeleteInventory = async (skuCode: string): Promise<void> => {
   await api.delete(`/api/inventory/admin/${skuCode}`);
 };
 
-// ==========================================
-// NOTIFICATION SERVICE ADMIN APIs
-// ==========================================
+
 
 export const adminGetNotifications = async (): Promise<NotificationEvent[]> => {
   const response = await api.get<NotificationEvent[]>('/api/notifications/all');

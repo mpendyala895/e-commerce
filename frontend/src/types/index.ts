@@ -32,7 +32,6 @@ export interface OrderLineItem {
   skuCode: string;
   price: number;
   quantity: number;
-  // Enriched fields:
   productName?: string;
   imageUrl?: string;
 }

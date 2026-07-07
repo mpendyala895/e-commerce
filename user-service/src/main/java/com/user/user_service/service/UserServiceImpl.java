@@ -33,7 +33,7 @@ public class UserServiceImpl implements UserService {
     private final org.springframework.kafka.core.KafkaTemplate<String, com.user.user_service.event.OrderPlacedEvent> kafkaTemplate;
 
     @Override
-    public UserResponseDTO register(UserRequestDTO userRequestDTO) {
+    public UserResponseDTO  register(UserRequestDTO userRequestDTO) {
         if (userRepository.existsByEmail(userRequestDTO.getEmail())) {
             throw new EmailAlreadyExistsException("Email already in use");
         }
